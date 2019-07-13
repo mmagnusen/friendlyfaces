@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Kimson, ShalomOne, ShalomTwo } from './assets'
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    profiles: [{
+      creator: 'Kimson Doan',
+      image: Kimson,
+      url: 'https://unsplash.com/@doanstopexploring'
+    }, 
+    {
+      creator: 'Shalom Mwenesi',
+      image: ShalomOne,
+      url: 'https://unsplash.com/@5halom_'
+    },
+    {
+      creator: 'Shalom Mwenesi',
+      image: ShalomTwo,
+      url: 'https://unsplash.com/@5halom_'
+    },]
+  };
+
+  componentDidMount() {
+
+  }
+
+  render() {
+
+    const { profiles } = this.state;
+
+    return (
+      <div className="Gallery">
+        {profiles && profiles.map((profile) => <div key={profile.id}><img src={profile.image}/></div>)}
+      </div>
+    )};
 }
 
 export default App;
