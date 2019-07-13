@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Main App It renders with gallery 1`] = `
+<div
+  className="Gallery"
+>
+  <div>
+    <img
+      alt="profile from Kimson Doan"
+      src="kimson.jpg"
+    />
+  </div>
+  <div>
+    <img
+      alt="profile from Shalom Mwenesi"
+      src="shalom-one.jpg"
+    />
+  </div>
+  <div>
+    <img
+      alt="profile from Shalom Mwenesi"
+      src="shalom-two.jpg"
+    />
+  </div>
+</div>
+`;

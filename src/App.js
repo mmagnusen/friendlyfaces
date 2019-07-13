@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Kimson, ShalomOne, ShalomTwo } from './assets'
-import axios from 'axios';
 import './App.css';
 
 class App extends Component {
@@ -22,17 +21,13 @@ class App extends Component {
     },]
   };
 
-  componentDidMount() {
-
-  }
-
   render() {
 
     const { profiles } = this.state;
 
     return (
       <div className="Gallery">
-        {profiles && profiles.map((profile) => <div key={profile.id}><img src={profile.image}/></div>)}
+        {profiles && profiles.map((profile) => <div key={profile.image}><img src={profile.image} alt={`profile from ${profile.creator}`}/></div>)}
       </div>
     )};
 }
